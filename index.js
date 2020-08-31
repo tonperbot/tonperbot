@@ -3,7 +3,7 @@ const exp = require('express'), app = exp(), http = require('http');
 app.set('port', (process.env.PORT || 5000));
 app.listen(app.get('port'), function (){ console.log('Node app is running on port', app.get('port'))});
 // Discord
-const fs = require('fs'), Discord = require('discord.js'), cli = new Discord.Client(), token = process.env.TOKEN, changeColor = require('./colors.js');
+const fs = require('fs'), Discord = require('discord.js'), cli = new Discord.Client(), token = process.env.TOKEN;
 cli.login(token);
 
 cli.on('ready', () => {
