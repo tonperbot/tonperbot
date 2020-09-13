@@ -12,7 +12,7 @@ cli.on('ready', () => {
 	}, 300000);
 });
 cli.on('message', (data) => {
-	if (data.content.startsWith('!!') || data.channel.type == 'dm' || data.author.bot) return;
+	if (!data.content.startsWith('!!') || data.channel.type == 'dm' || data.author.bot) return;
 	const args = data.content.substr(1).split(' ');
 
 	switch(args[0].toLowerCase()){
