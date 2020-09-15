@@ -13,7 +13,7 @@ cli.on('ready', () => {
 });
 cli.on('message', (data) => {
 	if (!data.content.startsWith('!!') || data.channel.type == 'dm' || data.author.bot) return;
-	const args = data.content.substr(1).split(' ');
+	const args = data.content.substr(2).split(' ');
 
 	switch(args[0].toLowerCase()){
 		case `j'ai pas rêvé, j'me réveille`:
